@@ -63,7 +63,7 @@ header h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif; /* même police que le reste */
+  font-family: 'Orbitron', sans-serif;
   font-size: 1em;
   transition: background-color 0.3s;
 }
@@ -77,12 +77,19 @@ header h1 {
   background-color: #1c1c1c;
   padding: 40px 20px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 #presentation h2 {
   color: #ffcc00;
   margin-bottom: 20px;
   font-size: 1.8em;
+  width: 100%;
+  text-align: center;
 }
 
 #presentation p,
@@ -94,7 +101,7 @@ header h1 {
 }
 
 #presentation ul {
-  list-style: none; /* pas de points */
+  list-style: none;
   padding: 0;
 }
 
@@ -165,21 +172,19 @@ a:hover {
 
 /* Style pour "Adresse" en blanc, même taille que "Horaires" */
 .label {
-  font-size: 1.1em !important; /* même taille que "Horaires" */
-  color: #ffcc00 !important;    /* couleur jaune */
+  font-size: 1.1em !important;
+  color: #ffcc00 !important;
   margin-right: 5px;
 }
 
-/* Adresse en dessous du mot "Adresse" et en blanc, survol en rouge (classe address) */
+/* Adresse en dessous du mot "Adresse" et en blanc, survol en rouge */
 .address {
   display: block;
-  color: #fff !important; /* blanc par défaut */
+  color: #fff !important;
   font-size: 1.1em;
   margin-top: 5px;
   text-decoration: none;
 }
-
-/* Si vous utilisez la classe "adresse" dans le HTML, remplacez-la par "address" */
 
 /* Autres styles */
 #infos {
@@ -205,7 +210,7 @@ a:hover {
 
 /* Liste horaires sans points */
 #infos ul {
-  list-style: none; /* pas de points */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -233,10 +238,10 @@ a:hover {
 
 /* CONTACT */
 #contact {
-  background-color: #121212; /* même que avis */
+  background-color: #121212;
   padding: 30px 20px;
   text-align: center;
-  border-radius: 8px; /* adoucit les angles */
+  border-radius: 8px;
   margin: 20px auto;
   max-width: 600px;
 }
@@ -346,7 +351,21 @@ footer {
   header h1 {
     font-size: 2em;
   }
-  #presentation h2,
+  #presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+  #presentation div {
+    width: 100%;
+  }
+  #presentation img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+  #presentation h2 {
+    font-size: 1.5em;
+  }
   #avis h2,
   #infos h2,
   #infos h3,
@@ -363,38 +382,10 @@ footer {
   #contact a {
     font-size: 1.2em;
   }
-}
-
-/* Numéros de contact en jaune par défaut, rouges au survol */
-.contact-number {
-  color: #ffcc00; /* jaune */
-  transition: color 0.3s;
-}
-
-.contact-number:hover {
-  color: #e10600; /* rouge */
-}
-
-/* Style pour le bouton "Contactez-nous" dans la section intro */
-.scroll-to-contact {
-  padding: 10px 20px;
-  background-color: #e10600;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Orbitron', sans-serif; /* même police que le reste */
-  font-size: 1em;
-  transition: background-color 0.3s;
-}
-
-.scroll-to-contact:hover {
-  background-color: #ff0000;
-}
-
-.titre-jaune {
-  color: #e6b800; /* couleur jaune du texte */
-  padding: 10px;
-  background: none; /* pas de fond coloré */
+  /* Bouton "Contactez-nous" */
+  .scroll-to-contact {
+    padding: 12px 24px;
+    font-size: 1.2em;
+  }
 }
 
