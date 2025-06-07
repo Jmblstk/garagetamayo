@@ -188,10 +188,10 @@ a:hover {
 /* Adresse en dessous du mot "Adresse" et en blanc, survol en rouge */
 .address {
   display: block;
-  color: #fff !important;
+  color: #ffcc00 !important;
   font-size: 1.1em;
   margin-top: 5px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* Autres styles */
