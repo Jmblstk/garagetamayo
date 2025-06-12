@@ -118,6 +118,15 @@ header h1 {
   color: #e10600;
 }
 
+/* Ajout pour la responsivité de l'image dans présentation */
+@media (max-width: 768px) {
+  #presentation img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* AVIS */
 #avis {
   background-color: #121212;
@@ -366,6 +375,7 @@ footer {
   #presentation div {
     width: 100%;
   }
+  /* Ajout pour la responsivité de l'image dans présentation */
   #presentation img {
     width: 80%;
     max-width: 100%;
