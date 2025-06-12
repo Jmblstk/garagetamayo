@@ -1,122 +1,398 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Garage Tamayo</title>
-  <!-- Improved CSS: Place your improved style.css here or inline for demo purposes -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Example: inline improvements for demonstration, replace or merge with your style.css -->
-  <style>
-    :root {
-      --primary-color: #e10600;
-      --secondary-color: #ffcc00;
-      --background-color: #121212;
-      --accent-bg: #1c1c1c;
-      --font-family: 'Orbitron', sans-serif;
-      --border-radius: 8px;
-    }
-    /* Add focus styles for accessibility */
-    a:focus, button:focus {
-      outline: 2px solid var(--secondary-color);
-      outline-offset: 2px;
-    }
-    /* Example: Use variable for header border */
-    header {
-      border-bottom: 3px solid var(--primary-color);
-    }
-    /* ...rest of your CSS or improved CSS file */
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Garage Tamayo</h1>
-  </header>
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
-  <section class="intro">
-    <h2>Bienvenue chez Garage Tamayo</h2>
-    <p>Votre garage de confiance pour l’entretien et la réparation de véhicules à prix compétitifs.</p>
-    <button class="scroll-to-contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-      Contactez-nous
-    </button>
-  </section>
+/* Reset de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <section id="presentation">
-    <h2>Présentation</h2>
-    <p>
-      Forts de plusieurs années d’expérience, nous vous proposons une gamme complète de services pour votre véhicule.
-    </p>
-    <ul>
-      <li>Entretien</li>
-      <li>Réparation</li>
-      <li>Conseil personnalisé</li>
-    </ul>
-  </section>
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
 
-  <section id="avis">
-    <h2>Vos avis</h2>
-    <div class="avis-carousel">
-      <div class="avis-track">
-        <div class="avis-item">"Service rapide et efficace, merci !" – Marie</div>
-        <div class="avis-item">"Toujours disponibles et à l’écoute." – Paul</div>
-        <div class="avis-item">"Prix honnêtes et conseils avisés." – Linda</div>
-        <!-- Add more avis-item as needed -->
-      </div>
-    </div>
-  </section>
+/* HEADER */
+header {
+  background-color: #000;
+  text-align: center;
+  padding: 220px 20px;
+  border-bottom: 3px solid #e10600;
+  background-image: url('logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
-  <section id="services">
-    <h2>Nos Services</h2>
-    <ul>
-      <li>Vidange</li>
-      <li>Freinage</li>
-      <li>Diagnostic</li>
-      <li>Pré-contrôle technique</li>
-    </ul>
-  </section>
+/* Ajout pour la responsivité de l'en-tête */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 20px; /* Réduit la hauteur pour mobile */
+  }
+}
 
-  <section id="infos">
-    <h2>Informations</h2>
-    <h3>Horaires</h3>
-    <ul>
-      <li>Lundi - Vendredi : 8h - 18h</li>
-      <li>Samedi : 9h - 13h</li>
-      <li>Dimanche : fermé</li>
-    </ul>
-    <h3>Adresse</h3>
-    <span class="label">Adresse:</span>
-    <span class="address">123 Avenue du Garage, 75000 Paris</span>
-  </section>
+/* Titre dans le header */
+header h1 {
+  color: #e10600 !important;
+  font-size: 4em;
+  font-weight: 900;
+  margin-top: 0;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <div class="contact-intro">Pour toute question, n’hésitez pas à nous joindre :</div>
-    <div class="contact-info">
-      <p><a href="tel:0102030405">01 02 03 04 05</a></p>
-      <p><a href="mailto:contact@garagetamayo.fr">contact@garagetamayo.fr</a></p>
-      <a class="facebook-link" href="https://www.facebook.com/garagetamayo" target="_blank" rel="noopener noreferrer">
-        Facebook
-      </a>
-    </div>
-  </section>
+/* INTRO */
+.intro {
+  background-color: #121212;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-  <footer>
-    <div class="footer-container">
-      <div class="contact-info">
-        <h2>Garage Tamayo</h2>
-        <p>123 Avenue du Garage, 75000 Paris</p>
-        <p>Tél : <a href="tel:0102030405">01 02 03 04 05</a></p>
-        <p>Email : <a href="mailto:contact@garagetamayo.fr">contact@garagetamayo.fr</a></p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/garagetamayo" target="_blank" aria-label="Facebook">&#x1F426;</a>
-        </div>
-      </div>
-      <div>&copy; 2025 Garage Tamayo. Tous droits réservés.</div>
-    </div>
-  </footer>
-  <!-- Example: minimal JS for smooth scroll (optional) -->
-  <script>
-    // Already handled by button's onclick, but you could improve accessibility if needed
-  </script>
-</body>
-</html>
+.intro h2 {
+  color: #ffcc00;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+/* Style pour le bouton "Contactez-nous" dans la section intro */
+.scroll-to-contact {
+  padding: 10px 20px;
+  background-color: #e10600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-contact:hover {
+  background-color: #ff0000;
+}
+
+/* PRESENTATION */
+#presentation {
+  background-color: #1c1c1c;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#presentation h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  width: 100%;
+  text-align: center;
+}
+
+#presentation p,
+#presentation li {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+#presentation ul {
+  list-style: none;
+  padding: 0;
+}
+
+#presentation li {
+  font-weight: bold;
+  color: #e10600;
+}
+
+/* AVIS */
+#avis {
+  background-color: #121212;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#avis h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.avis-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.avis-track {
+  display: flex;
+  width: max-content;
+  animation: defilementInfini 60s linear infinite;
+}
+
+.avis-item {
+  min-width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Liens globaux */
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e10600;
+}
+
+/* Liens spécifiques (adresse, téléphone, réseaux sociaux) */
+.link-hover {
+  color: #ffcc00 !important;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.address,
+.contact-info a {
+  transition: color 0.3s;
+}
+
+.address:hover,
+.contact-info a:hover {
+  color: #e10600 !important;
+}
+
+/* Style pour "Adresse" en blanc, même taille que "Horaires" */
+.label {
+  font-size: 1.1em !important;
+  color: #ffcc00 !important;
+  margin-right: 5px;
+}
+
+/* Adresse en dessous du mot "Adresse" et en blanc, survol en rouge */
+.address {
+  display: block;
+  color: #ffcc00 !important;
+  font-size: 1.1em;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+/* Autres styles */
+#infos {
+  background-color: #1c1c1c;
+  padding: 30px 20px;
+}
+
+#infos h2,
+#infos h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+#infos p,
+#infos li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#infos strong {
+  color: #e10600;
+}
+
+/* Liste horaires sans points */
+#infos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* SERVICES */
+#services {
+  background-color: #1a1a1a;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services li {
+  background: #2c2c2c;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 300px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* CONTACT */
+#contact {
+  background-color: #121212;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+#contact h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+#contact .contact-intro {
+  color: #fff !important;
+  margin-bottom: 15px;
+}
+
+#contact a {
+  color: #ffcc00;
+  font-size: 1.2em;
+  display: block;
+  margin: 10px 0;
+  transition: color 0.3s;
+}
+
+#contact a:hover {
+  color: #e10600;
+}
+
+#contact .facebook-link {
+  font-size: 1.2em;
+  color: #ffcc00;
+  transition: color 0.3s;
+  margin-top: 10px;
+}
+
+#contact .facebook-link:hover {
+  color: #e10600;
+}
+
+/* FOOTER */
+footer {
+  background-color: #121212;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: #121212;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contact-intro {
+  color: #fff !important;
+}
+
+.contact-info h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Logo Facebook dans le footer */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffcc00;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e10600;
+}
+
+/* Animation défilement avis */
+@keyframes defilementInfini {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 20px; /* Ajustement pour mobile */
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  #presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+  #presentation div {
+    width: 100%;
+  }
+  #presentation img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+  #presentation h2 {
+    font-size: 1.5em;
+  }
+  #avis h2,
+  #infos h2,
+  #infos h3,
+  #contact h2 {
+    font-size: 1.5em;
+  }
+  .avis-item {
+    font-size: 1em;
+    padding: 10px;
+  }
+  #services li {
+    max-width: 90%;
+  }
+  #contact a {
+    font-size: 1.2em;
+  }
+  /* Bouton "Contactez-nous" */
+  .scroll-to-contact {
+    padding: 12px 24px;
+    font-size: 1.2em;
+  }
+}
