@@ -21,19 +21,13 @@ header {
   background-color: #000;
   text-align: center;
   padding: 220px 20px;
+  min-height: 300px;
   border-bottom: 3px solid #e10600;
   background-image: url('logo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-}
-
-/* Ajout pour la responsivité de l'en-tête */
-@media (max-width: 768px) {
-  header {
-    padding: 40px 20px; /* Réduit la hauteur pour mobile */
-  }
 }
 
 /* Titre dans le header */
@@ -43,6 +37,21 @@ header h1 {
   font-weight: 900;
   margin-top: 0;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+/* Ajout pour la responsivité de l'en-tête */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 20px;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 150px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
 }
 
 /* INTRO */
@@ -63,7 +72,6 @@ header h1 {
   margin-bottom: 0;
 }
 
-/* Style pour le bouton "Contactez-nous" dans la section intro */
 .scroll-to-contact {
   padding: 10px 20px;
   background-color: #e10600;
@@ -118,12 +126,49 @@ header h1 {
   color: #e10600;
 }
 
-/* Ajout pour la responsivité de l'image dans présentation */
 @media (max-width: 768px) {
+  #presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #presentation div {
+    width: 100%;
+  }
+
   #presentation img {
     width: 80%;
     max-width: 100%;
     height: auto;
+  }
+
+  #presentation h2 {
+    font-size: 1.5em;
+  }
+
+  #avis h2,
+  #infos h2,
+  #infos h3,
+  #contact h2 {
+    font-size: 1.5em;
+  }
+
+  .avis-item {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  #services li {
+    max-width: 90%;
+  }
+
+  #contact a {
+    font-size: 1.2em;
+  }
+
+  .scroll-to-contact {
+    padding: 12px 24px;
+    font-size: 1.2em;
   }
 }
 
@@ -170,7 +215,7 @@ a:hover {
   color: #e10600;
 }
 
-/* Liens spécifiques (adresse, téléphone, réseaux sociaux) */
+/* Liens spécifiques */
 .link-hover {
   color: #ffcc00 !important;
   text-decoration: none;
@@ -187,14 +232,12 @@ a:hover {
   color: #e10600 !important;
 }
 
-/* Style pour "Adresse" en blanc, même taille que "Horaires" */
 .label {
   font-size: 1.1em !important;
   color: #ffcc00 !important;
   margin-right: 5px;
 }
 
-/* Adresse en dessous du mot "Adresse" et en blanc, survol en rouge */
 .address {
   display: block;
   color: #ffcc00 !important;
@@ -203,7 +246,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Autres styles */
+/* INFOS */
 #infos {
   background-color: #1c1c1c;
   padding: 30px 20px;
@@ -225,7 +268,6 @@ a:hover {
   color: #e10600;
 }
 
-/* Liste horaires sans points */
 #infos ul {
   list-style: none;
   padding: 0;
@@ -319,10 +361,6 @@ footer {
   border-radius: 8px;
 }
 
-.contact-intro {
-  color: #fff !important;
-}
-
 .contact-info h2 {
   color: #ffcc00;
   margin-bottom: 10px;
@@ -332,7 +370,6 @@ footer {
   margin: 5px 0;
 }
 
-/* Logo Facebook dans le footer */
 .social-icons {
   margin-top: 10px;
   display: flex;
@@ -357,52 +394,5 @@ footer {
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-/* Styles responsive */
-@media (max-width: 768px) {
-  header {
-    padding: 40px 20px; /* Ajustement pour mobile */
-  }
-  header h1 {
-    font-size: 2em;
-  }
-  #presentation {
-    flex-direction: column;
-    align-items: center;
-  }
-  #presentation div {
-    width: 100%;
-  }
-  /* Ajout pour la responsivité de l'image dans présentation */
-  #presentation img {
-    width: 80%;
-    max-width: 100%;
-    height: auto;
-  }
-  #presentation h2 {
-    font-size: 1.5em;
-  }
-  #avis h2,
-  #infos h2,
-  #infos h3,
-  #contact h2 {
-    font-size: 1.5em;
-  }
-  .avis-item {
-    font-size: 1em;
-    padding: 10px;
-  }
-  #services li {
-    max-width: 90%;
-  }
-  #contact a {
-    font-size: 1.2em;
-  }
-  /* Bouton "Contactez-nous" */
-  .scroll-to-contact {
-    padding: 12px 24px;
-    font-size: 1.2em;
   }
 }
